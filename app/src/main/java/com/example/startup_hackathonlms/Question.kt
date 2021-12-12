@@ -1,26 +1,28 @@
 package com.example.startup_hackathonlms
 
-class Question: IQuestion {
-
-
+class Question (
+    private val question: String,
+    private val answer: String,
+    private var weight: Int = 5
+): IQuestion {
 
     override fun incWeight() {
-        TODO("Not yet implemented")
+        weight++
     }
 
     override fun decWeight() {
-        TODO("Not yet implemented")
+        weight--
     }
 
     override fun getWeight(): Int {
-        TODO("Not yet implemented")
+        return weight
     }
 
     override fun getAnswer(): String {
-        TODO("Not yet implemented")
+        return answer
     }
 
     override fun getQuestion(): String {
-        TODO("Not yet implemented")
+        return question
     }
 }
